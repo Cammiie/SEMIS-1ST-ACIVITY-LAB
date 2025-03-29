@@ -1,0 +1,55 @@
+#include <iostream>
+#include <map>
+#include <string>
+
+using namespace std;
+
+int main() {
+    // This is the dictionary with all the DATA
+    map<string, string> DATA = {
+        {"Force", "A push or pull on an object."},
+        {"Torque", "A measure of rotational force."},
+        {"Voltage", "The electrical potential difference."},
+        {"Current", "The flow of electric charge."},
+        {"Resistance", "Opposition to the flow of current."},
+        {"John", "A person from Asia."},
+        {"lomibao", "Taga Binmaley."},
+        {"don_reji", "Kalbo from UDD."},
+        {"sir_gab", "Programming professor."},
+        {"bautista", "My surname."},
+        {"trump", "President of the United States."},
+        {"bybit", "Crypto currency exchange."},
+        {"IPO", "Input process output framework."},
+        {"tagalog", "Language in the Philippines."},
+        {"UDD", "Universidad de Dagupan."},
+        {"Newton", "Unit of force in physics."},
+        {"Ohm", "Unit of electrical resistance."},
+        {"Watt", "Unit of power in physics."},
+        {"Faraday", "Scientist known for electromagnetism."},
+        {"Einstein", "Physicist known for relativity."},
+        {"Tesla", "Inventor known for AC electricity."},
+        {"Python", "A popular programming language."},
+        {"JavaScript", "A programming language for web."},
+        {"Algorithm", "A step-by-step problem-solving method."},
+        {"Database", "A structured collection of data."},
+        {"Bit", "The smallest unit of digital data."},
+        {"Byte", "8 bits, representing a character."},
+        {"AI", "Artificial Intelligence."},
+        {"Machine Learning", "A subset of AI for pattern recognition."},
+        {"Cybersecurity", "Protection of computer systems."}
+    };
+
+    cout << "What u want to define? ";
+    string userInput;
+    getline(cin, userInput);
+
+    auto searchResult = DATA.find(userInput);
+
+    if (searchResult != DATA.end()) {
+        cout << "\n" << searchResult->first << ": " << searchResult->second << "\n";
+    } else {
+        cout << "\n" << userInput << ": Term not found in the dictionary.\n";
+    }
+
+    return 0;
+}
