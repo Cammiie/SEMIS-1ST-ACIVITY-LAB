@@ -1,55 +1,77 @@
 #include <iostream>
-#include <map>
 #include <string>
 
 using namespace std;
 
-int main() {
-    // This is the dictionary with all the DATA
-    map<string, string> DATA = {
-        {"Force", "A push or pull on an object."},
-        {"Torque", "A measure of rotational force."},
-        {"Voltage", "The electrical potential difference."},
-        {"Current", "The flow of electric charge."},
-        {"Resistance", "Opposition to the flow of current."},
-        {"John", "A person from Asia."},
-        {"lomibao", "Taga Binmaley."},
-        {"don_reji", "Kalbo from UDD."},
-        {"sir_gab", "Programming professor."},
-        {"bautista", "My surname."},
-        {"trump", "President of the United States."},
-        {"bybit", "Crypto currency exchange."},
-        {"IPO", "Input process output framework."},
-        {"tagalog", "Language in the Philippines."},
-        {"UDD", "Universidad de Dagupan."},
-        {"Newton", "Unit of force in physics."},
-        {"Ohm", "Unit of electrical resistance."},
-        {"Watt", "Unit of power in physics."},
-        {"Faraday", "Scientist known for electromagnetism."},
-        {"Einstein", "Physicist known for relativity."},
-        {"Tesla", "Inventor known for AC electricity."},
-        {"Python", "A popular programming language."},
-        {"JavaScript", "A programming language for web."},
-        {"Algorithm", "A step-by-step problem-solving method."},
-        {"Database", "A structured collection of data."},
-        {"Bit", "The smallest unit of digital data."},
-        {"Byte", "8 bits, representing a character."},
-        {"AI", "Artificial Intelligence."},
-        {"Machine Learning", "A subset of AI for pattern recognition."},
-        {"Cybersecurity", "Protection of computer systems."}
-    };
+int main(){
+	string a;
 
-    cout << "What u want to define? ";
-    string userInput;
-    getline(cin, userInput);
+	cout << "Please enter a term to define: ";
+	cin >> a;
 
-    auto searchResult = DATA.find(userInput);
+	if (a == "Force") {
+		cout << "A push or pull on an object." << endl;
+	} else if (a == "Torque") {
+		cout << "A measure of rotational force." << endl;
+	} else if (a == "Voltage") {
+		cout << "The electrical potential difference." << endl;
+	} else if (a == "Current") {
+		cout << "The flow of electric charge." << endl;
+	} else if (a == "Resistance") {
+		cout << "Opposition to the flow of current." << endl;
+	} else if (a == "John") {
+		cout << "A person from Asia." << endl;
+	} else if (a == "lomibao") {
+		cout << "Taga Binmaley." << endl;
+	} else if (a == "don_reji") {
+		cout << "Kalbo from UDD." << endl;
+	} else if (a == "sir_gab") {
+		cout << "Programming professor." << endl;
+	} else if (a == "bautista") {
+		cout << "My surname." << endl;
+	} else if (a == "trump") {
+		cout << "President of the United States." << endl;
+	} else if (a == "bybit") {
+		cout << "Crypto currency exchange." << endl;
+	} else if (a == "IPO") {
+		cout << "Input process output framework." << endl;
+	} else if (a == "tagalog") {
+		cout << "Language in the Philippines." << endl;
+	} else if (a == "UDD") {
+		cout << "Universidad de Dagupan." << endl;
+	} else if (a == "Newton") {
+		cout << "Unit of force in physics." << endl;
+	} else if (a == "Ohm") {
+		cout << "Unit of electrical resistance." << endl;
+	} else if (a == "Watt") {
+		cout << "Unit of power in physics." << endl;
+	} else if (a == "Faraday") {
+		cout << "Scientist known for electromagnetism." << endl;
+	} else if (a == "Einstein") {
+		cout << "Physicist known for relativity." << endl;
+	} else if (a == "Tesla") {
+		cout << "Inventor known for AC electricity." << endl;
+	} else if (a == "Python") {
+		cout << "A popular programming language." << endl;
+	} else if (a == "JavaScript") {
+		cout << "A programming language for web." << endl;
+	} else if (a == "Algorithm") {
+		cout << "A step-by-step problem-solving method." << endl;
+	} else if (a == "Database") {
+		cout << "A structured collection of data." << endl;
+	} else if (a == "Bit") {
+		cout << "The smallest unit of digital data." << endl;
+	} else if (a == "Byte") {
+		cout << "8 bits, representing a character." << endl;
+	} else if (a == "AI") {
+		cout << "Artificial Intelligence." << endl;
+	} else if (a == "Machine Learning") {
+		cout << "A subset of AI for pattern recognition." << endl;
+	} else if (a == "Cybersecurity") {
+		cout << "Protection of computer systems." << endl;
+	} else {
+		cout << "Term not found in the dictionary." << endl;
+	}
 
-    if (searchResult != DATA.end()) {
-        cout << "\n" << searchResult->first << ": " << searchResult->second << "\n";
-    } else {
-        cout << "\n" << userInput << ": Term not found in the dictionary.\n";
-    }
-
-    return 0;
+	return 0;
 }
